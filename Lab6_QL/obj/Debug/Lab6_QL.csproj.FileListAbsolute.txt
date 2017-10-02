@@ -1,0 +1,7 @@
+C:\Users\Abe\source\repos\Lab6_QL\Lab6_QL\bin\Debug\Lab6_QL.exe.config
+C:\Users\Abe\source\repos\Lab6_QL\Lab6_QL\bin\Debug\Lab6_QL.exe
+C:\Users\Abe\source\repos\Lab6_QL\Lab6_QL\bin\Debug\Lab6_QL.pdb
+C:\Users\Abe\source\repos\Lab6_QL\Lab6_QL\obj\Debug\Lab6_QL.csprojResolveAssemblyReference.cache
+C:\Users\Abe\source\repos\Lab6_QL\Lab6_QL\obj\Debug\Lab6_QL.csproj.CoreCompileInputs.cache
+C:\Users\Abe\source\repos\Lab6_QL\Lab6_QL\obj\Debug\Lab6_QL.exe
+C:\Users\Abe\source\repos\Lab6_QL\Lab6_QL\obj\Debug\Lab6_QL.pdb
