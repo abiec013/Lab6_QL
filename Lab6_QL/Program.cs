@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Lab6_QL
@@ -21,68 +22,86 @@ namespace Lab6_QL
                 string str;
                 str = Console.ReadLine();
                 str = str.ToLower();        //converts users text to lower case
-                
 
-                char[] vowels = { 'a', 'e', 'i', 'o', 'u' }; //indicates what characters need to be located
 
-                if (str.IndexOfAny(vowels) == 0)
 
+                char[] numbersSymbols = {'1','2','3','4','5','6','7','8','9','0',
+                                        '!','@','#','$','%','^','&','*','(',')' };
+
+                if (str.IndexOfAny(numbersSymbols) != -1 || str == "")
                 {
-                    Console.WriteLine(str + "way");
-
+                    programContinues = false;
                 }
 
                 else
-
                 {
 
-                    Console.WriteLine(str.Substring(str.IndexOfAny(vowels)) + str.Substring(0, str.IndexOfAny(vowels)) + "ay");
 
-                }
 
-                //user is given two options, to continue or not
+                    char[] vowels = { 'a', 'e', 'i', 'o', 'u' }; //indicates what characters need to be located
 
-                string userChoice;
-                Console.WriteLine("Would you like to translate another word?" + " " + "yes/No");
-                userChoice = Console.ReadLine();
+                    if (str.IndexOfAny(vowels) == 0)
 
-                if (userChoice == "yes")
-                {
-                    programContinues = true;
-                }
-
-                else if (userChoice == "no")
-                {
-                    programContinues = false;
-                    Console.WriteLine("Bye");
-                }
-
-                else                       
-                {
-                    string userChoice1="";      //ensures the user gives a correct answer
-                    bool answer = true;
-                    while (answer == true)
                     {
-                        Console.WriteLine("Please give a correct answer!");
-                       
-                        userChoice1 = Console.ReadLine();
-                        if (userChoice1 == "yes" || userChoice1 == "no")
-                        {
-                            break; 
 
-                        }
-                        
-                        
+                        Console.WriteLine(str + "ay");
+
+                    }
+
+                    else
+
+                    {
+
+                        Console.WriteLine(str.Substring(str.IndexOfAny(vowels)) + str.Substring(0, str.IndexOfAny(vowels)) + "ay");
+
                     }
 
 
-                    if (userChoice1 == "no")
-                        programContinues = false; 
+
+                    //user is given two options, to continue or not
+
+                    string userChoice;
+                    Console.WriteLine("Would you like to translate another word?" + " " + "yes/No");
+                    userChoice = Console.ReadLine();
+
+                    if (userChoice == "yes")
+                    {
+                        programContinues = true;
+                    }
+
+                    else if (userChoice == "no")
+                    {
+                        programContinues = false;
+                        Console.WriteLine("Bye");
+                    }
+
+                    else
+                    {
+                        string userChoice1 = "";      //ensures the user gives a correct answer
+                        bool answer = true;
+                        while (answer == true)
+                        {
+                            Console.WriteLine("Please give a correct answer!");
+
+                            userChoice1 = Console.ReadLine();
+                            if (userChoice1 == "yes" || userChoice1 == "no")
+                            {
+                                break;
+
+                            }
 
 
+                        }
+
+
+                        if (userChoice1 == "no")
+                            programContinues = false;
+
+
+
+                    }
 
                 }
-
 
 
 
@@ -102,7 +121,7 @@ namespace Lab6_QL
 
         }
 
-       
+
 
 
 
